@@ -15,7 +15,7 @@ $ docker volume create --name zend
 Run in background:
 
 ```console
-$ docker run -v zend:/zend -d --name YOUR_CONTAINER_NAME -p YOUR_PORT:YOUR_PORT calvintam236/zend:x86_64 -datadir=/zend -server -rest -rpcport=YOUR_PORT
+$ docker run -v zend:/zend -d --name YOUR_CONTAINER_NAME -p YOUR_PORT:YOUR_PORT calvintam236/zend:x86_64 -datadir=/zend -server -rest -rpcbind=0.0.0.0 -rpcuser=YOUR_USERNAME -rpcpassword=YOUR_PASSWORD -rpcport=YOUR_PORT
 ```
 
 Get `zend` options with:
