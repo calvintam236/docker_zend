@@ -7,9 +7,9 @@ WORKDIR /tmp
 
 RUN apt-get update \
     && apt-get -y --no-install-recommends install ca-certificates curl libgomp1 \
-    && curl -L -O https://github.com/ZencashOfficial/zen/releases/download/v2.0.10/zen-2.0.10-amd64.deb \
-    && dpkg -i zen-2.0.10-amd64.deb \
-    && rm zen-2.0.10-amd64.deb \
+    && curl -L -O https://github.com/ZencashOfficial/zen/releases/download/v2.0.10/zen-2.0.10-arm64.deb \
+    && dpkg -i zen-2.0.10-arm64.deb \
+    && rm zen-2.0.10-arm64.deb \
     && apt-get -y remove ca-certificates curl \
     && apt-get -y autoremove \
     && apt-get clean autoclean \
